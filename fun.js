@@ -1,15 +1,15 @@
-// (function show(){
-//     console.log("welcome to CsB")
-// })();
-// //immediately invoked function expression (IIFE)
-// (()=>{
-//     console.log("Welcome to csb ");
-// })()
-function person(){
-    this.age=20;
-    setTimeout(function(){console.log(this.age)},1000)
-}
-new person();
+// // (function show(){
+// //     console.log("welcome to CsB")
+// // })();
+// // //immediately invoked function expression (IIFE)
+// // (()=>{
+// //     console.log("Welcome to csb ");
+// // })()
+// function person(){
+//     this.age=20;
+//     setTimeout(function(){console.log(this.age)},1000)
+// }
+// new person();
 
 
 // function person(){
@@ -17,3 +17,16 @@ new person();
 //     setTimeout(() => {console.log(this.age)},1000)
 // }
 // new person();
+
+const user ={
+    name:"kunal",age:20,
+    welcome: () => {
+        console.log(`welcome ${this.name}`);  //lexical analysis and dynamic 
+        console.log(this);
+    }
+};
+const f=user.welcome();
+console.log(f);
+
+// user.name="ajay";
+// user.welcome();
